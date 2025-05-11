@@ -3,8 +3,6 @@ version: "3.8"
 services:
   backend:
     container_name: backend
-    depends_on:
-      - postgres
     build:
       context: .
       dockerfile: backend/Dockerfile
@@ -15,22 +13,8 @@ services:
     volumes:
       - ./backend/app:/app
 
-  postgres:
-    image: postgres:17
-    container_name: postgres
-    hostname: psql-server
-    ports:
-      - 5433:5432
-    restart: always
-    environment:
-      - POSTGRES_DB=datastore
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
-    volumes:
-      - datastore:/var/lib/postgresql/data
-
   nginx:
-    container_name: nginx
+    container_name: proxy
     build: ./nginx
     ports:
       - "80:80"
