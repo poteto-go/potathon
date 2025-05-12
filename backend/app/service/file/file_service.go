@@ -28,14 +28,9 @@ func (fs *FileService) UploadFile(r *http.Request) error {
 		return infra.ErrOverMaxContentLength
 	}
 
-	data, err := usecase.ReadFileFromRequest(r)
+	data, fileName, err := usecase.ReadFileFromRequest(r)
 	if err != nil {
 		return err
-	}
-
-	fileName := r.FormValue("file-name")
-	if fileName == "" {
-		return infra.ErrNoRequestFormData
 	}
 
 	var ctx = context.Background()

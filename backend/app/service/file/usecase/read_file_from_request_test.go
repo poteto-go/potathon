@@ -32,7 +32,7 @@ func TestReadFileFromRequest(t *testing.T) {
 			)
 
 			// Act
-			_, err := ReadFileFromRequest(r)
+			_, _, err := ReadFileFromRequest(r)
 
 			// Assert
 			assert.Error(t, err)
