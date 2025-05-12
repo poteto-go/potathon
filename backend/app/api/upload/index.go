@@ -1,14 +1,18 @@
 package upload
 
-import "github.com/poteto-go/poteto"
+import (
+	"github.com/poteto-go/potathon-backend/api/upload/controller"
+	"github.com/poteto-go/poteto"
+	"github.com/redis/go-redis/v9"
+)
 
-func NewUploadApi() poteto.Poteto {
+func NewUploadApi(rdb *redis.Client) poteto.Poteto {
 	uploadApi := poteto.New()
 
 	uploadApi.Leaf("/upload", func(api poteto.Leaf) {
-		api.POST("/input", func(ctx poteto.Context) error {
-			return nil
-		})
+		uploadController := controller.NewUploadController(rdb)
+
+		api.POST("/input", uploadController.UploadInput)
 	})
 
 	return uploadApi

@@ -8,7 +8,7 @@ import (
 )
 
 func TestNewUploadApi(t *testing.T) {
-	uploadApi := NewUploadApi()
+	uploadApi := NewUploadApi(nil)
 
 	t.Run("assert find route", func(t *testing.T) {
 		t.Run("[POST] /upload/input", func(t *testing.T) {
