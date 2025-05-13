@@ -4,3 +4,4 @@ node_modules/
 .wrangler/
 *.wasm
 .dev.vars*
+*.rdb
