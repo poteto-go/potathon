@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  calculator:
+    container_name: calculator
+    build:
+      context: calculator
+      dockerfile: Dockerfile
+    ports:
+      - 2000:2000
+    volumes:
+      - ./calculator/app:/app
+
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file:
+      - backend/app/.env
+    ports:
+      - 3000:3000
+    volumes:
+      - ./backend/app:/app
+
+  nginx:
+    container_name: proxy
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  datastore:
+
+networks:
+  default:
