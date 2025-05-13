@@ -1,6 +1,7 @@
 version: "3.8"
 
 services:
+<<<<<<< HEAD
   calculator:
     container_name: calculator
     build:
@@ -11,6 +12,8 @@ services:
     volumes:
       - ./calculator/app:/app
 
+=======
+>>>>>>> main
   backend:
     container_name: backend
     build:
