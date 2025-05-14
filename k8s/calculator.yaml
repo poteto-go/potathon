@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: calculator-pods
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: calculator
+  template:
+    metadata:
+      labels:
+        app: calculator
+    spec:
+      containers:
+        - name: calculator-node
+          image: poteto0/potathon-calculator:latest
+          imagePullPolicy: Always
+          command: ["python", "-u", "/app/hello.py"]
+          resources:
+            limits:
+              cpu: "950m"
