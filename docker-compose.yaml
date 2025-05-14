@@ -1,7 +1,6 @@
 version: "3.8"
 
 services:
-<<<<<<< HEAD
   calculator:
     container_name: calculator
     build:
@@ -12,8 +11,14 @@ services:
     volumes:
       - ./calculator/app:/app
 
-=======
->>>>>>> main
+  redis:
+    container_name: kvs
+    image: redis:latest
+    ports:
+      - 6379:6379
+    volumes:
+      - ./data/kvs:/data
+
   backend:
     container_name: backend
     build:
@@ -25,6 +30,8 @@ services:
       - 3000:3000
     volumes:
       - ./backend/app:/app
+    depends_on:
+      - redis
 
   nginx:
     container_name: proxy
@@ -35,7 +42,7 @@ services:
       - backend
 
 volumes:
-  datastore:
+  kvs:
 
 networks:
   default:
