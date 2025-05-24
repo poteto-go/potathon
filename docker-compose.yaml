@@ -1,6 +1,16 @@
 version: "3.8"
 
 services:
+  calculator:
+    container_name: calculator
+    build:
+      context: calculator
+      dockerfile: Dockerfile
+    ports:
+      - 2000:2000
+    volumes:
+      - ./calculator/app:/app
+
   redis:
     container_name: kvs
     image: redis:latest
