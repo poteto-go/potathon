@@ -12,7 +12,7 @@ func main() {
 	p := poteto.New()
 
 	rdb := redis.NewClient(&redis.Options{
-		Addr:     "kvs:6379",
+		Addr:     "potathon-kvs:6379",
 		Password: "", // no password set
 		DB:       0,  // use default DB
 		PoolSize: 1000,

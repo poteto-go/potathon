@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: potathon-kvs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: potathon-kvs
+  template:
+    metadata:
+      labels:
+        app: potathon-kvs
+    spec:
+      containers:
+        - name: redis
+          image: redis:alpine
+          ports:
+            - containerPort: 6379

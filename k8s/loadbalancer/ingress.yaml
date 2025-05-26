@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: potathon-ingress
+spec:
+  rules:
+    - host: potathon.example.com
+      http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: potathon-nginx-np
+              servicePort: 80
+  backend:
+    serviceName: potathon-nginx-np
+    servicePort: 80
+  tls:
+    - hosts:
+        - potathon.example.com
+      secretName: tls-potathon
