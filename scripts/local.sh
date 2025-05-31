@@ -21,6 +21,8 @@ deploy() {
     # deploy loadbalancer
     kubectl apply -f k8s/loadbalancer/service.yaml
 
+    sleep 10
+
     local url=$(minikube service potathon-nginx-lb --url)
     echo service on "$url"
 }
