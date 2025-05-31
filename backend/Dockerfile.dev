@@ -2,11 +2,11 @@ FROM golang:1.24.1
 
 WORKDIR /app
 
-COPY /app/go.mod /app/
-COPY /app/go.sum /app/
+COPY backend/app/go.mod /app/
+COPY backend/app/go.sum /app/
 
 RUN go mod download
 
-COPY /app/ /app/
+COPY backend/app/ /app/
 
 ENTRYPOINT [ "go", "run", "main.go" ]

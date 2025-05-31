@@ -12,18 +12,18 @@ services:
       - ./calculator/app:/app
 
   redis:
-    container_name: kvs
+    container_name: potathon-kvs
     image: redis:latest
     ports:
       - 6379:6379
     volumes:
-      - ./data/kvs:/data
+      - ./data/potathon-kvs:/data
 
   backend:
     container_name: backend
     build:
       context: .
-      dockerfile: backend/Dockerfile
+      dockerfile: backend/Dockerfile.dev
     env_file:
       - backend/app/.env
     ports:
