@@ -1,20 +1,18 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: potathon-ingress
+  namespace: default
 spec:
+  ingressClassName: nginx
   rules:
     - host: potathon.example.com
       http:
         paths:
-          - path: /*
-            backend:
-              serviceName: potathon-nginx-np
-              servicePort: 80
-  backend:
-    serviceName: potathon-nginx-np
-    servicePort: 80
-  tls:
-    - hosts:
-        - potathon.example.com
-      secretName: tls-potathon
+          - backend:
+              service:
+                name: potathon-nginx-lb
+                port:
+                  number: 80
+            path: /ingress
+            pathType: Exact
