@@ -5,13 +5,6 @@ set -o nounset
 set -o pipefail
 
 teardown() {
-    # delete ingress
-    kubectl delete ingressclass nginx
-    kubectl delete ing potathon-ingress
-
-    # delete nodeport
-    kubectl delete service potathon-nginx-np
-
     # delete loadbalancer
     kubectl delete service potathon-nginx-lb
 
