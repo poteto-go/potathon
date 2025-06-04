@@ -4,7 +4,7 @@ go 1.24.1
 
 require (
 	github.com/agiledragon/gomonkey v2.0.2+incompatible
-	github.com/poteto-go/poteto v1.10.3
+	github.com/poteto-go/poteto v1.11.0
 	github.com/redis/go-redis/v9 v9.8.0
 	github.com/stretchr/testify v1.10.0
 )

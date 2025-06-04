@@ -43,8 +43,8 @@ github.com/mattn/go-isatty v0.0.20 h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWE
 github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/poteto-go/poteto v1.10.3 h1:foEb1qrwVU68SA9pMFEGiGUugXZsziIRLvbJ+Vm2cgA=
-github.com/poteto-go/poteto v1.10.3/go.mod h1:T/jss7EXIK8j2MiGItaP5vuwrjxGtd5tRQfajVx1XSY=
+github.com/poteto-go/poteto v1.11.0 h1:I0p8hvBKLAxTAw7JCh5/2O41AFyU0h3oTbIzHooD2fY=
+github.com/poteto-go/poteto v1.11.0/go.mod h1:T/jss7EXIK8j2MiGItaP5vuwrjxGtd5tRQfajVx1XSY=
 github.com/poteto-go/tslice v0.4.0 h1:AihA32BmSW4a/FpnzO8yjUbclr0XxGyuBc2rpHvxb8A=
 github.com/poteto-go/tslice v0.4.0/go.mod h1:tjvnuwUBOzukU3b8sE9acz8Gnc1W/gl/EU2RXdDCpG8=
 github.com/redis/go-redis/v9 v9.8.0 h1:q3nRvjrlge/6UD7eTu/DSg2uYiU2mCL0G/uzBWqhicI=
