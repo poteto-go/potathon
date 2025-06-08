@@ -1,0 +1,8 @@
+.env
+.vscode/
+node_modules/
+.wrangler/
+*.wasm
+.dev.vars*
+*.rdb
+*.out

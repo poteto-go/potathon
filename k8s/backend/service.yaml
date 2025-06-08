@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: potathon-backend-service
+spec:
+  type: ClusterIP
+  ports:
+    - name: "http-port"
+      protocol: "TCP"
+      port: 3000
+      targetPort: 3000
+  selector:
+    app: potathon-backend
