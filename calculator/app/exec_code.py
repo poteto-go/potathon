@@ -18,8 +18,8 @@ def exec_code(binary_path, input_path, output_path, err_path):
             return -1
 
 if __name__ == "__main__":
-    sample_binary = "_sample/a.out"
-    sample_input = "_sample/input.txt"
-    sample_output = "_sample/output.txt"
-    sample_error = "_sample/error.txt"
+    sample_binary = "_fixture/a.out"
+    sample_input = "_fixture/input.txt"
+    sample_output = "_fixture/output.txt"
+    sample_error = "_fixture/error.txt"
     exec_code(sample_binary, sample_input, sample_output, sample_error)
