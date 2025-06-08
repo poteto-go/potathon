@@ -22,7 +22,7 @@ def build_cpp(cppcode_path):
         return None
     
 if __name__ == "__main__":
-    sample_cpp = "_sample/sample_code.cpp"
+    sample_cpp = "_fixture/sample_code.cpp"
     binary = build_cpp(sample_cpp)
     if binary:
         print(f"Binary created at: {binary}")
