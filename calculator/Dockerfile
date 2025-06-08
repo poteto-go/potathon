@@ -18,4 +18,4 @@ RUN poetry config virtualenvs.create false && \
 
 COPY app/ /app/
 
-CMD ["python", "/app/hello.py"]
+CMD ["python", "/app/exec_code.py"]
