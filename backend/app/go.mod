@@ -5,7 +5,7 @@ go 1.24.1
 require (
 	github.com/agiledragon/gomonkey v2.0.2+incompatible
 	github.com/poteto-go/poteto v1.11.0
-	github.com/redis/go-redis/v9 v9.9.0
+	github.com/redis/go-redis/v9 v9.18.0
 	github.com/stretchr/testify v1.10.0
 )
 
@@ -28,6 +28,7 @@ require (
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/poteto-go/tslice v0.4.0 // indirect
+	go.uber.org/atomic v1.11.0 // indirect
 	golang.org/x/crypto v0.36.0 // indirect
 	golang.org/x/exp v0.0.0-20250210185358-939b2ce775ac // indirect
 	golang.org/x/net v0.38.0 // indirect
